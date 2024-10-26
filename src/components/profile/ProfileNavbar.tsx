@@ -69,7 +69,7 @@ const ProfileNavbar = () => {
               <Link href="/tentangkami">Tentang Kami</Link>
             </li>
             <li className="md:px-4 md:py-2 hover:text-indigo-400">
-              <Link href="#contact">Kontak</Link>
+              <Link href="/sign-in">Login</Link>
             </li>
           </ul>
         </div>

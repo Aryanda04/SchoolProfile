@@ -1,6 +1,9 @@
 import ImageSlideshow from "@/components/profile/ImageSlideShow";
 import ProfileFooter from "@/components/profile/ProfileFooter";
 import ProfileNavbar from "@/components/profile/ProfileNavbar";
+import ScrollToTopButton from "@/components/profile/ScrollToTopButton";
+import Image from "next/image";
+import Link from "next/link";
 
 const Homepage = () => {
   return (
@@ -8,9 +11,11 @@ const Homepage = () => {
       <ProfileNavbar />
       <main className="flex-grow">
         <div className="relative h-[70vh]">
-          <img
+          <Image
             src="https://placehold.co/1600x900"
             alt="Hero Image"
+            width={1600}
+            height={900}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
@@ -21,9 +26,11 @@ const Homepage = () => {
               <p className="text-xl md:text-2xl mb-8">
                 Discover amazing content and experiences
               </p>
-              <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-                Get Started
-              </button>
+              <Link href="/formpendaftaran">
+                <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+                  Daftar Sekarang
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -35,9 +42,11 @@ const Homepage = () => {
             </h2>
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/2">
-                <img
+                <Image
                   src="https://placehold.co/600x400"
                   alt="Foto Sekolah"
+                  width={600}
+                  height={400}
                   className="rounded-lg shadow-md"
                 />
               </div>
@@ -184,6 +193,7 @@ const Homepage = () => {
         </section>
       </main>
       <ProfileFooter />
+      <ScrollToTopButton />
     </div>
   );
 };

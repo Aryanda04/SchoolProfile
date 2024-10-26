@@ -2,6 +2,8 @@ import Menu from "@/components/Menu";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function DashboardLayout({
   children,
